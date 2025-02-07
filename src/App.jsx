@@ -1,13 +1,11 @@
+import Navbar from "./Navbar";
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
     <>
-      
+      <Navbar/>
     </>
   )
 }
 
-export default App
