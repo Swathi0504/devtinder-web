@@ -9,6 +9,7 @@ const Login = () => {
 
    const [emailId,setEmailId]= useState("");
    const [password,setPassword] = useState("");
+   const [error,setError] = useState("");
 
    const dispatch = useDispatch();
    const navigate = useNavigate();
@@ -27,7 +28,8 @@ const Login = () => {
         return navigate("/");
        }
        catch(err){
-         console.log(err);
+         setError(err?.response?.data || "Something went wrong");
+        // console.log(err?.response?.data || "Something went wrong");
        }
    }
 
@@ -53,6 +55,7 @@ const Login = () => {
             setPassword(e.target.value);
           }}/>
       </label>
+      <p className='text-red-500'>{error}</p>
       <div className="card-actions justify-center my-4">
         <button className="btn bg-cyan-950 text-white hover:bg-slate-600" onClick={handleLogin}>Login</button>
       </div>
