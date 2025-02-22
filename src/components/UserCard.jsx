@@ -9,20 +9,20 @@ const UserCard = ({user}) => {
             <img
             className='w-96'
             src={photoUrl}
-            alt="Shoes" />
+            alt="img" />
         </figure>
         <div className="card-body">
             <h2 className="card-title">{firstName +" "+ lastName}</h2>
             <p>{age+" "+gender}</p>
             <p>{about}</p>
             <div className="card-actions justify-end">
-            <button className="btn bg-cyan-800 text-white">Ignore</button>
-            <button className="btn bg-cyan-800 text-white">Interested</button>
+            <button className="btn bg-pink-400 text-white">Ignore</button>
+            <button className="btn bg-violet-600 text-white">Interested</button>
             </div>
         </div>
         </div>
      </div>
-        
+   
     
   )
 }
