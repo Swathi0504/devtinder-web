@@ -32,7 +32,7 @@ const Body = () => {
 
   return (<div>
     <Navbar/>
-    <Outlet/>
+    <div className='h-[550px] overflow-scroll'><Outlet/></div>
     <Footer/>
   </div>
   )

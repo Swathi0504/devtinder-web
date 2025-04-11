@@ -17,7 +17,7 @@ const Feed = () => {
         withCredentials: true,
       })
       dispatch(addFeed(res?.data))
-      console.log(res)
+      //console.log(res)
     }
     catch(err){
        //Error handling
@@ -30,7 +30,11 @@ const Feed = () => {
     getFeed();
   },[])
 
+  if(!feed)
+    return
   
+  if(feed.length<=0) return <h1>No new users found</h1>
+
   return feed && (
       <UserCard user={feed[0]}/>
   ) 
